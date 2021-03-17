@@ -1,0 +1,39 @@
+﻿@using FinalYearProjet.Models;
+@model Restaurent
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<h2 class="bg-info text-center p-2 text-dark">Form To Add Restaurent</h2>
+<form class="bg-light text-center p-2 text-dark" method="post" action="/RestaurentAdmin/AddRestaurent">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="NameOfRestaurants"></label><br>
+        <input asp-for="NameOfRestaurants"><br>
+        <span asp-validation-for="NameOfRestaurants"></span>
+    </div>
+    <div>
+        <label asp-for="Location"></label><br>
+        <input asp-for="Location"><br>
+        <span asp-validation-for="Location"></span>
+    </div>
+    <div>
+        <label asp-for="PhoneNo"></label><br>
+        <input asp-for="PhoneNo"><br>
+        <span asp-validation-for="PhoneNo"></span>
+    </div>
+    <div>
+        <label asp-for="OpenUntil"></label><br>
+        <input asp-for="OpenUntil"><br>
+
+    </div>
+    <div>
+        <label asp-for="DeliveryCharges "></label><br>
+        <input asp-for="DeliveryCharges " type="password"><br>
+        <br />
+        <span asp-validation-for="DeliveryCharges "></span>
+    </div>
+    <input class="bg-success" type="submit" value="Add User" /><br>
+    <br />
+
+</form>
+

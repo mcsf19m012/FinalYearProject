@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse alert-dark">
+        <div class="container-fluid alert-info">
+            <div class="navbar-header bs-popover-top">
+                <a class="navbar-dark">Post website</a>
+
+            </div>
+
+            <div>
+
+                <a class="btn-info text-center " asp-controller="AddUser" asp-action="AddUserForm">Add User</a>
+                <a class="btn-info text-center " asp-controller="AddUser" asp-action="ViewUser">View User</a>
+                <a class="btn-info text-center " asp-controller="Admin" asp-action="AdminLogin">Logout</a>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+
+
+</html>

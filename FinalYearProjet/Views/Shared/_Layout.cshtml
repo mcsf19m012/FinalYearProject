@@ -1,0 +1,35 @@
+﻿<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <h1 class="text-center">----- Assalam o alikum !  ---- </h1>
+
+    <nav class="navbar navbar-inverse alert-dark">
+        <div class="container-fluid alert-info">
+            <div class="navbar-header bs-popover-top">
+                <a class="navbar-dark">Online Cafeteria and Restaurnt System</a>
+
+            </div>
+
+            <div>
+
+                <a class="btn-info text-center "  asp-action="RestaurentList"> RestaurentList </a>&nbsp;
+                <a class="btn-info text-center " asp-action="RestaurentCartView">CartView </a>&nbsp;
+                <a class="btn-info text-center " asp-action="RestaurentHomePage">Logout</a>
+
+            </div>
+
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+
+
+</html>
