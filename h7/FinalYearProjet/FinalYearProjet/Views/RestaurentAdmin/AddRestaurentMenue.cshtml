@@ -1,0 +1,109 @@
+﻿@using FinalYearProjet.Models;
+@model RestaurentMenu
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+
+}
+<style>
+body { background-image: url('http://kaalas.pk/wp-content/uploads/2020/07/restaurant-marketing-1024x683-1.jpeg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; }
+
+    * {
+        box-sizing: border-box;
+    }
+    .form-area {
+        background: rgba(0,0,0,0.5);
+        width: 450px;
+        left: 30%;
+    }
+
+    .dropbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+</style>
+
+
+<h2  class="bg-transparent p-2 text-dark font-italic  text-center ">This is item Addition form</h2>
+<form enctype="multipart/form-data" class=" position-absolute  text-center p-2 text-dark shadow form-area " method="post" asp-action="AddMenu">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="RestaurentID"></label><br>
+        <input class="bg-transparent" asp-for="RestaurentID" placeholder="Enter  Restaurant Id " readonly><br>
+        <span asp-validation-for="RestaurentID"> </span>
+    </div>
+
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="NameOfItem"></label><br>
+        <input class="bg-transparent" asp-for="NameOfItem" placeholder="Enter item Name "><br>
+        <span asp-validation-for="NameOfItem"></span>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="Price"></label><br>
+        <input class="bg-transparent" asp-for="Price" placeholder="Enter item price "><br>
+        <span asp-validation-for="Price"></span>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="Quantity"></label><br>
+        <input class="bg-transparent" asp-for="Quantity" placeholder="Enter Quantity"><br>
+        <span asp-validation-for="Quantity"></span>
+    </div>
+
+    <label for="unit" class="text-warning font-weight-bold font-italic">Choose any unit of quantity:</label><br />
+    <select  name="unit" id="unit">
+        <option value="kilogram">Select Unit</option>
+        <option value="kilogram">Kilogram</option>
+        <option value="piece">piece</option>
+        <option value="box">Box</option>
+        <option value="liter">liter</option>
+    </select>
+
+
+
+
+    <div class="custom-file">
+        <div>
+            <input class="form-control bg-transparent" asp-for="Photo2"><br>
+        </div>
+    </div>
+    <input class="bg-success" type="submit" value="Add Item" /><br>
+    <br />
+
+</form>

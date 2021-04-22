@@ -1,0 +1,65 @@
+﻿@model List<FinalYearProjet.Models.RestaurentMenu>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+
+
+}
+<style>
+    body {
+        background-image: url('https://img.theculturetrip.com/450x/smart/wp-content/uploads/2016/09/eminonu_dsc1727-t.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+</style>
+<div>
+    <a class="btn btn-dark" asp-action="Back" >back</a>
+</div>
+
+<div  > 
+    @foreach (FinalYearProjet.Models.RestaurentMenu rm in Model)
+    {
+       @if (rm.RestaurentID == FinalYearProjet.Models.RestaurentRepository.GetRestaurentId())
+       {
+        <div>
+            <div class="col-xl-3 col-lg-4 col-sm rotate">
+                <div class="card text-center mb-3 cafe-card">
+                    <div class="card-header">
+                        <h4 class="font-weight-light title-text">@rm.NameOfItem</h4>
+                    </div>
+                    <div class="card-body">
+                        <img class="img-fluid rounded" src="~/RestaurentImages/@rm.PhotoPATH2">
+                    </div>
+                    <div class="card-footer">
+                      view Detail of items  :)
+                    </div>
+                    <div class="back">
+                        <div class="back-content">
+                            <h1 class="text-uppercase font-weight-light">Have</h1>
+                            <h3 class="mb-3">Fun</h3>
+                            <a asp-action="MenueDetail" asp-route-restaurentID="@rm.RestaurentID" asp-route-menuID="@rm.MenuID" class="btn btn-warning "  class="btn btn-warning hwr-right my-4 text-capitalize">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a  asp-action="MenueDetail" asp-route-restaurentID="@rm.RestaurentID" asp-route-menuID="@rm.MenuID" class="btn btn-warning "></a>
+                    </div>
+
+                </div>
+
+
+            </div>
+            
+        </div>
+       }
+    }
+
+</div>
+
+

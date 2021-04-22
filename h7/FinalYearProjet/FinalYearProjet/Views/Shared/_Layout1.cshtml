@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse  alert-dismissible">
+        <div class="container-fluid alert-dismissible">
+            <div class="navbar-heade bs-popover-top  ">
+                <a class="navbar-dark text-warning font-italic font-weight-bold bg-dark">Online Cafeteria and Restaurnt System</a>
+
+            </div>
+
+            <div>
+
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentAdmin" asp-action="AddRestaurent">Add Restaurent</a>
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentAdmin" asp-action="ViewRestaurent">View Restaurent</a>
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentAdmin" asp-action="">Logout</a>
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentAdmin" asp-action="ViewRestaurentMenue">View Menue</a>
+            </div>
+
+
+        </div>
+    </nav>
+    <div>
+        <h1 class="text-center text-warning font-italic font-weight-bold">----- Assalam o alikum !  ---- </h1>
+
+        @RenderBody()
+    </div>
+
+</body>
+
+
+</html>

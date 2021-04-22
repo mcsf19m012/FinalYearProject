@@ -1,0 +1,81 @@
+﻿@model FinalYearProjet.Models.RestaurentMenu;
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+
+
+}
+<style>
+    body {
+        background-image: url('');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+</style>
+
+
+
+
+<div>
+
+    <div>
+        <h3>You can ADD TO CART following item by clicking on ADD To Cart</h3>
+        <h2 class="alert-dismissible text-center text-dark font-italic ">@Model.NameOfItem</h2>
+        <img height="600" width="550" class="img card-img-top h-7 w-7" src="~/MenueImages/@Model.PhotoPATH2" />
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <h3>PRICE</h3>
+                </div>
+                <div class="col">
+                    <h3>QUANTITY</h3>
+                </div>
+                <div class="col">
+                    <h3>Unit</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    @Model.Price
+                </div>
+                <div class="col">
+                    @Model.Quantity
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h2>
+        Detail Of Item
+    </h2>
+    <p>We are offering you the most tasty product that will make you addict of our product. We are providing you world most tasty Biryani that fullfill all quality requirements.</p>
+
+
+
+
+</div>
+<div>
+
+    <a class="btn-info text-center " asp-controller="" asp-action="">Add to Cart </a>
+
+
+</div>
+
+
+
+<div id="ex1" class="modal">
+    <p>Thanks for clicking. That felt good.</p>
+    <a href="#" rel="modal:close">Close</a>
+</div>
+
+<!-- Link to open the modal -->
+<p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+
+

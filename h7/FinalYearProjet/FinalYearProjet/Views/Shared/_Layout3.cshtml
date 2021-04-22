@@ -1,0 +1,43 @@
+﻿<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse  alert-dismissible">
+        <div class="container-fluid alert-dismissible">
+            <div class="navbar-heade bs-popover-top  ">
+                <a class="navbar-dark text-warning font-italic font-weight-bold bg-dark">Online Cafeteria and Restaurnt System</a>
+
+            </div>
+
+            <div>
+
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentOwner" asp-action="ownerHomePage">Home</a>
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentOwner" asp-action="Profile">Profile</a>
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentOwner" asp-action="OwnerMenuList">Menu List</a>
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentOwner" asp-action="AddMenu">Add Menu List</a>
+
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentOwner" asp-action="OrderList">Order List</a>
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentOwner" asp-action="PendingOrderList">Pending Order</a>
+
+                <a class="btn-dark text-center text-warning font-italic font-weight-bold " asp-controller="RestaurentOwner" asp-action="Logout">Logout</a>
+
+            </div>
+
+
+        </div>
+    </nav>
+    <div>
+        <h1 class="text-center text-warning font-italic font-weight-bold">----- Assalam o alikum !  ---- </h1>
+
+        @RenderBody()
+    </div>
+
+</body>
+
+
+</html>

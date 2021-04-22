@@ -1,0 +1,71 @@
+﻿
+@using FinalYearProjet.Models;
+@model Restaurent
+@{
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+
+
+}
+
+
+
+<form class="   text-center p-2 text-dark shadow " method="post" asp-action="Profile">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <img class="img card-img-top h-7 w-7" src="~/RestaurentImages/@Model.PhotoPATH" />
+
+
+
+    <div>
+        <label class="text-warning font-weight-bold font-italicr" asp-for="RestaurentID"></label><br>
+        <input class="bg-transparent" asp-for="RestaurentID" placeholder="Enter  Restaurant Id " readonly><br>
+        <span asp-validation-for="RestaurentID"> </span>
+    </div>
+
+
+
+    <div>
+        <label class="text-warning font-weight-bold font-italicr" asp-for="Password"></label><br>
+        <input class="bg-transparent" asp-for="Password" type="password"><br>
+        <span></span>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italicr" asp-for="Password">Old Password</label><br>
+        <input class="bg-transparent" asp-for="Password" readonly><br>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="NameOfRestaurants"></label><br>
+        <input class="bg-transparent" asp-for="NameOfRestaurants" placeholder="Enter Name Of Restaurant "><br>
+        <span asp-validation-for="NameOfRestaurants"></span>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic " asp-for="Location"></label><br>
+        <input class="bg-transparent" asp-for="Location" placeholder="Enter Address"><br>
+        <span asp-validation-for="Location"></span>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="PhoneNo"></label><br>
+        <input class="bg-transparent" asp-for="PhoneNo" placeholder="Enter contact details"><br>
+        <span asp-validation-for="PhoneNo"></span>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="OpenUntil"></label><br>
+        <input class="bg-transparent" asp-for="OpenUntil" placeholder="Enter timings"><br>
+
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="DeliveryCharges "></label><br>
+        <input class="bg-transparent" asp-for="DeliveryCharges " placeholder="Enter Delivery Charges "><br>
+        <br />
+        <span asp-validation-for="DeliveryCharges "></span>
+    </div>
+
+    <div class="custom-file">
+        <div>
+            <input class="form-control  bg-transparent" asp-for="Photo"><br>
+        </div>
+    </div>
+    <input class="bg-success" type="submit" value="Update Restaurent" /><br>
+    <br />
+
+</form>

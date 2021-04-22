@@ -1,0 +1,31 @@
+﻿@using FinalYearProjet.Models;
+@model User
+
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+
+</head>
+<body>
+    <h1 class="text-center">-----AOA WELCOME------ </h1>
+    <div>
+        <h2 class="bg-info text-center p-2 text-dark">This is user form for Login</h2>
+        <form class="bg-light text-center p-2 text-dark" method="post" action="/User/Login">
+
+            <label asp-for="UserID"></label><br>
+            <input asp-for="UserID"><br>
+
+            <label asp-for="Password"></label><br>
+            <input asp-for="Password" type="password"><br>
+            <br />
+            <input class="bg-success" type="submit" value="Login" /><br>
+
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+﻿@using FinalYearProjet.Models;
+@model User
+    <style>
+        body {
+            background-image: url('https://upserve.com/media/sites/2/Restaurant-Decor-Blog.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            width: 50%;
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .form-area {
+            background: rgba(0,0,0,0.5);
+            width: 450px;
+            left: 30%;
+        }
+    </style>
+
+    <form enctype="multipart/form-data" class=" position-absolute  text-center p-2 text-dark shadow form-area " method="post" action="/Restaurent/UserSignUp">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label class="text-warning font-weight-bold font-italic" asp-for="UserID"></label><br>
+            <input class="bg-transparent" asp-for="UserID" placeholder="Enter  Restaurant Id "><br>
+            <span asp-validation-for="UserID"></span>
+        </div>
+        <div>
+            <label class="text-warning font-weight-bold font-italic" asp-for="Password"></label><br>
+            <input class="bg-transparent" asp-for="Password" type="password" placeholder="Enter  Your Password "><br>
+            <br />
+            <span asp-validation-for="Password"></span>
+        </div>
+
+        <br />
+
+        <input class="bg-success" type="submit" value="Signed Up" /><br>
+        <br />
+        <!--Click to <a class="btn btn-info" asp-controller="RestaurentOwner" asp-action="ownerHomePage"> </a>
+        -->
+        <br />
+
+
+    </form>

@@ -1,0 +1,80 @@
+﻿@using FinalYearProjet.Models;
+@model RestaurentMenu;
+@{
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+
+
+}
+<style>
+body { background-image: url('https://www.foodies.pk/wp-content/uploads/2020/01/Delicious-bruschettas-with-beef.jpeg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; }
+
+    * {
+        box-sizing: border-box;
+    }
+    .form-area {
+        background: rgba(0,0,0,0.5);
+        width: 450px;
+        left: 30%;
+    }
+</style>
+
+<h2 class="bg-transparent p-2 text-dark font-italic  text-center ">This is edit  form</h2>
+<form class=" position-absolute  text-center p-2 text-dark shadow form-area " method="post" asp-action="EditItem">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <img class="img card-img-top h-7 w-7" src="~/MenueImages/@Model.PhotoPATH2" />
+
+
+
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="RestaurentID"></label><br>
+        <input class="bg-transparent" asp-for="RestaurentID" readonly><br>
+        <span asp-validation-for="RestaurentID"> </span>
+    </div>
+
+
+
+
+
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="MenuID"></label><br>
+        <input class="bg-transparent" asp-for="MenuID" readonly><br>
+        <span asp-validation-for="MenuID"> </span>
+    </div>
+
+
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="NameOfItem"></label><br>
+        <input class="bg-transparent" asp-for="NameOfItem" placeholder="Enter item Name "><br>
+        <span asp-validation-for="NameOfItem"></span>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="Price"></label><br>
+        <input class="bg-transparent" asp-for="Price" placeholder="Enter item price "><br>
+        <span asp-validation-for="Price"></span>
+    </div>
+    <div>
+        <label class="text-warning font-weight-bold font-italic" asp-for="Quantity"></label><br>
+        <input class="bg-transparent" asp-for="Quantity" placeholder="Enter Quantity"><br>
+        <span asp-validation-for="Quantity"></span>
+    </div>
+
+
+
+    <label for="unit" class="text-warning font-weight-bold font-italic">Choose any unit of quantity:</label><br />
+    <select name="unit" id="unit">
+        <option value="kilogram">Select Unit</option>
+        <option value="kilogram">Kilogram</option>
+        <option value="piece">piece</option>
+        <option value="box">Box</option>
+        <option value="liter">liter</option>
+    </select>
+    <div class="custom-file">
+        <div>
+            <input class="form-control bg-transparent" asp-for="Photo2"><br>
+        </div>
+    </div>
+    <input class="bg-success" type="submit" value="Update Menue" /><br>
+    <br />
+
+</form>

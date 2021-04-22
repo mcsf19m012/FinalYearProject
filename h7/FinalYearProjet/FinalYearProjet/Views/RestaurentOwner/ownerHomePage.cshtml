@@ -1,0 +1,64 @@
+﻿@model FinalYearProjet.Models.Restaurent;
+@{
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+    var r=ViewBag.r;
+}
+<style>
+    body {
+        background-image: url('');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+</style>
+
+
+
+
+<div>
+
+    <div>
+
+         <h2 class="alert-dismissible text-center text-dark font-italic ">@r.NameOfRestaurants</h2>
+        <img height="330" width="450" class="img card-img-top h-7 w-7" src="~/RestaurentImages/@r.PhotoPATH" />
+       
+        <div class="card text-center mb-3 cafe-card">
+            <div class="card-header">
+                <h5 class="font-weight-light title-text">Phone Number<a href="tel:'@r.PhoneNo+'">@r.PhoneNo</a></h5>
+                <h5>Adress: @r.Location</h5>
+                <h6>open until: @r.OpenUntil</h6>
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <br />
+   
+
+
+
+</div>
+<div>
+
+    <!--<a class="btn-info text-center " asp-controller="" asp-action="">View Menu</a>
+    -->
+   
+            <div class="card-footer">
+                View Tasty Menu Items :)
+            </div>
+            <div class="back">
+                <div class="back-content">
+                    <h1 class="text-uppercase font-weight-light">Have</h1>
+                    <h3 class="mb-3">Fun</h3>
+                    <a asp-action="OwnerMenuList" class="btn btn-warning hwr-right my-4 text-capitalize">Get Started</a>
+                </div>
+            </div>
+
+        </div>
+
+
+
